@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAgenda.Views.EditPage"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Title="Editar Contacto">
+    <ScrollView>
+        <StackLayout Spacing="10">
+            <controls:CircleImage x:Name="Foto" 
+                                  HeightRequest="150" 
+                                  WidthRequest="150"
+                                  BorderThickness="9"
+                                  HorizontalOptions="Center"
+                                  Aspect="AspectFit">
+                <OnPlatform x:TypeArguments="x:Double"
+                                      iOS="55"
+                                      Android="55"
+                                      WinPhone="75"/>
+            </controls:CircleImage>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnTomarFoto"
+                        Text="Tomar Fotografía"
+                        BackgroundColor="#193B59"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+                <Button x:Name="btnSeleccionarFoto"
+                        Text="Buscar Fotografía"
+                        BackgroundColor="#193B59"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+            </StackLayout>
+            <Entry x:Name="txtNombre"
+                   Placeholder="Nombre"/>
+            <Entry x:Name="txtCorreo"
+                   Placeholder="Correo"
+                   Keyboard="Email"/>
+            <Entry x:Name="txtTelefono"
+                   Placeholder="Telefono"
+                   Keyboard="Telephone"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnEditar"
+                Text="Actualizar"
+                BackgroundColor="#3CA6A6"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+                <Button x:Name="btnEliminar"
+                Text="Eliminar"
+                BackgroundColor="#D92A1A"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
